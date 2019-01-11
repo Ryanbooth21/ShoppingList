@@ -65,7 +65,7 @@ class MealList extends React.Component{
         <button type="submit" onClick={()=> this.handleClick(this.state.Noodles)}>Noodles</button>
         <button type="submit" onClick={()=> this.handleClick(this.state.OvenRoastedZuchini)}>OvenRoasted Zucchini</button>
         <button type="submit" onClick={()=> this.handleClick(this.state.BroccoliMushroom)}>Broccoli and Mushrooms</button>
-        <h2>My Shopping List</h2>
+
         <ShoppingList list={this.state.MyList.map((item)=>{
           return(
             <li>{item}</li>
@@ -80,6 +80,7 @@ class ShoppingList extends React.Component{
   render(){
     return(
       <div>
+        <h2>My Shopping List</h2>
         {this.props.list}
       </div>
     )
