@@ -28,8 +28,12 @@ class MealList extends React.Component{
       this.state = {
         JamacianJerkBeans: ["Coconut Milk","Onions", "Garlic","Jerk Seasoning"],
         StirFryPecanPie: ["Sweet Potato","Greens","Pecans","Cinnamon"],
+        RoastedChicken: ["1 Whole Chicken", "Garlic"],
+        CollardGreens: ["CollardGreens", "Garlic", "Onions"],
+        YogurtParfait: ["Greek Yogurt", "Nuts", "Bananas", "Chia Seeds"],
+        Eggs: ["Eggs"],
+        Curry: ["CollardGreens", "Sweet Potato", "Coconut Milk", "Curry Paste", "Onions", "Garlic", "Nuts", "Cilantro"],
         MyList: [],
-        FilteredList: []
       }
       this.handleClick = this.handleClick.bind(this)
   }
@@ -52,6 +56,10 @@ class MealList extends React.Component{
         <h1>My Meals</h1>
         <button type="submit" onClick={()=> this.handleClick(this.state.StirFryPecanPie)}>Stir Fry Pecan Pie</button>
         <button type="submit" onClick={()=> this.handleClick(this.state.JamacianJerkBeans)}> Jamacian Jerk Beans</button>
+        <button type="submit" onClick={()=> this.handleClick(this.state.RoastedChicken)}>Roasted Chicken</button>
+        <button type="submit" onClick={()=> this.handleClick(this.state.CollardGreens)}>Collard Greens</button>
+        <button type="submit" onClick={()=> this.handleClick(this.state.Eggs)}>Eggs</button>
+        <button type="submit" onClick={()=> this.handleClick(this.state.Curry)}>Curry</button>
 
         <h2>My Shopping List</h2>
         <ShoppingList list={this.state.MyList.map((item)=>{
